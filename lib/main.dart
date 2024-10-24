@@ -21,12 +21,22 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 228, 191, 156),
-          leading: const Icon(Icons.chevron_left, size: 40), // Tombol kembali dengan ikon panah kiri
           title: const Text(
             "Pastry Mantullll", // Judul di AppBar
             style: TextStyle(fontWeight: FontWeight.bold), // Teks judul dengan font tebal
           ),
           centerTitle: true, // agar judul di tengah AppBar
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(child: Text("Pastry Mantullll")),
+              ListTile(
+                leading: Icon(Icons.alarm),
+                title: Text("Pastry Mantullll"),
+              )
+            ],
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0), // Padding untuk layout utama
